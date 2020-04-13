@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginRight="@dimen/_25sdp"
+    android:layout_marginBottom="@dimen/_20sdp"
+    android:id="@+id/rl_main">
+
+
+    <!--<android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/category_placeholder"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        android:scaleType="fitXY"
+        android:padding="0dp"
+        android:layout_centerHorizontal="true"/>-->
+
+    <ImageView
+        android:id="@+id/fab"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:src="@drawable/category_placeholder"
+        android:scaleType="fitXY"
+        android:padding="0dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tv_category_name"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_below="@id/fab"
+        android:layout_width="@dimen/_67sdp"
+        android:layout_height="wrap_content"
+        android:text="Burger"
+        android:singleLine="true"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        style="@style/BlackArchivoNarrow"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"/>
+
+</RelativeLayout>
+
+
+

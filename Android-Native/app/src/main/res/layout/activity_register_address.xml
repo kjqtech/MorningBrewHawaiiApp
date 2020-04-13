@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingPrefix">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_gradient"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/_30sdp">
+
+
+            <TextView
+                android:text="Address"
+                android:textSize="@dimen/_35sdp"
+                style="@style/WhiteArchivoNarrowBold"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:id="@+id/tv_title"/>
+
+            <!--<RelativeLayout
+                android:layout_alignParentTop="true"
+                android:id="@+id/ll_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp">
+
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/img_back_arrow"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/back_arrow_black"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/tv_store_location"
+                    android:text="Address Book"
+                    android:textSize="@dimen/_22sdp"
+                    style="@style/BlackArchivoNarrow" />
+
+
+            </RelativeLayout>
+-->
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_below="@id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+               <!-- <android.support.design.widget.TextInputLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/white"
+                    app:errorEnabled="true"
+                    app:boxStrokeColor="@color/white"
+                    android:focusable="true"
+                    android:backgroundTint="@color/white">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:imeOptions="actionNext"
+                        android:layout_marginBottom="8dp"
+                        android:inputType="text"
+                        android:hint="Save as name"
+                        android:textColorHint="@color/text_hint"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14sdp"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+            -->    <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_street_address"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/white"
+                    app:errorEnabled="true"
+                    app:boxStrokeColor="@color/white"
+                    android:focusable="true"
+                    android:backgroundTint="@color/white">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/apt_street_address"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:imeOptions="actionNext"
+                        android:layout_marginBottom="8dp"
+                        android:inputType="text"
+                        android:hint="Street Address"
+                        android:textColorHint="@color/text_hint"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:textSize="@dimen/_14sdp"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_street_apartment"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/white"
+                    app:errorEnabled="true"
+                    app:boxStrokeColor="@color/white"
+                    android:focusable="true"
+                    android:backgroundTint="@color/white">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/apt_street_apartment"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:imeOptions="actionNext"
+                        android:layout_marginBottom="8dp"
+                        android:inputType="text"
+                        android:hint="Apartment/Floor"
+                        android:textColorHint="@color/text_hint"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:textSize="@dimen/_14sdp"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:id="@+id/til_city"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/white"
+                    app:errorEnabled="true"
+                    app:boxStrokeColor="@color/white"
+                    android:backgroundTint="@color/white">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/apt_city"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:imeOptions="actionNext"
+                        android:layout_marginBottom="8dp"
+                        android:inputType="text"
+                        android:hint="City"
+                        android:textColorHint="@color/text_hint"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:textSize="@dimen/_14sdp"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <TextView
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="City"
+                    style="@style/WhiteArchivoNarrow"
+                    android:textSize="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_4sdp"/>
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView2"
+                    android:layout_below="@+id/textView2"
+                    android:textColor="@color/white"
+                    android:singleLine="true"
+                    style="@style/WhiteArchivoNarrow"
+                    android:hint="Enter city"
+                    android:theme="@style/Autocomplete"
+                    android:textColorHint="@color/text_hint"/>
+
+
+                <TextView
+                    android:id="@+id/tv_city_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Please enter city"
+                    style="@style/WhiteArchivoNarrow"
+                    android:textColor="@color/error_red"
+                    android:textSize="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_4sdp"/>
+
+
+                <TextView
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="State"
+                    style="@style/WhiteArchivoNarrow"
+                    android:textSize="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_4sdp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spn_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:spinnerMode="dropdown"
+                        android:theme="@style/ThemeSpinner"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:src="@drawable/dropdown_image"
+                        android:foregroundTint="@color/white"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3px"
+                    android:background="@color/white"
+                    android:layout_marginHorizontal="@dimen/_3sdp"/>
+
+                <TextView
+                    android:id="@+id/tv_state_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Please select state"
+                    style="@style/WhiteArchivoNarrow"
+                    android:textColor="@color/error_red"
+                    android:textSize="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_4sdp"/>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:id="@+id/til_state"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/white"
+                    app:errorEnabled="true"
+                    app:boxStrokeColor="@color/white"
+                    android:clickable="true"
+                    android:backgroundTint="@color/white">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/apt_state"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:imeOptions="actionNext"
+                        android:layout_marginBottom="8dp"
+                        android:inputType="text"
+                        android:hint="State"
+                        android:clickable="true"
+                        android:textColorHint="@color/text_hint"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:textSize="@dimen/_14sdp"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:id="@+id/til_pincode"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/white"
+                    app:errorEnabled="true"
+                    app:boxStrokeColor="@color/white"
+                    android:focusable="true"
+                    android:backgroundTint="@color/white">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/apt_pincode"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:imeOptions="actionNext"
+                        android:layout_marginBottom="8dp"
+                        android:inputType="number"
+                        android:hint="Zipcode"
+                        android:maxLength="5"
+                        android:textColorHint="@color/text_hint"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:textSize="@dimen/_14sdp"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+
+
+                <Button
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:id="@+id/btn_save"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/button_red"
+                    android:text="SAVE"
+                    android:textSize="@dimen/_12sdp"
+                    android:textAllCaps="true"
+                    style="@style/WhiteArial"
+                    android:layout_marginBottom="@dimen/_20sdp"/>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

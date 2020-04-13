@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/_15sdp">
+
+        <TextView
+            android:id="@+id/tv_label_1"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Ready to place your order from Gregs Pizza - West Coast ?"
+            android:textSize="@dimen/_12sdp"
+            style="@style/BlackArchivoNarrow"
+            android:textColor="@color/black"
+            android:padding="@dimen/_5sdp"/>
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp">
+
+<!--
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/ll_google_pay"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="match_parent"
+                android:layout_height="48sp"
+                android:background="@drawable/googlepay_button_no_shadow_background"
+                android:paddingTop="2sp"
+                android:contentDescription="@string/googlepay_button_content_description">
+                <LinearLayout
+                    android:duplicateParentState="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="2"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:scaleType="fitCenter"
+                        android:duplicateParentState="true"
+                        android:src="@drawable/googlepay_button_content"/>
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:duplicateParentState="true"
+                    android:src="@drawable/googlepay_button_overlay"/>
+            </RelativeLayout>
+-->
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_payment_pickup"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_red"
+            android:text="Payment on Pickup ($19.18)"
+            android:textSize="@dimen/_12sdp"
+            android:textAllCaps="true"
+            style="@style/WhiteArial"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"/>
+
+
+        <Button
+            android:id="@+id/btn_debit_credit"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_red"
+            android:text="Pay By Credit/Debit Card ($19.18)"
+            android:textSize="@dimen/_12sdp"
+            android:textAllCaps="true"
+            style="@style/WhiteArial"
+            android:layout_marginVertical="@dimen/_5sdp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="OR"
+            android:textSize="@dimen/_10sdp"
+            style="@style/BlackArchivoNarrow"
+            android:textColor="@color/text_gray"
+            android:padding="@dimen/_5sdp"/>
+
+        <Button
+            android:id="@+id/btn_continue"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_red"
+            android:text="Continue shopping"
+            android:textSize="@dimen/_12sdp"
+            android:textAllCaps="true"
+            style="@style/WhiteArial"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_10sdp"/>
+
+
+        <TextView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/tv_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="By placing your order, you agree to Trec2go's"
+            android:textSize="@dimen/_10sdp"
+            style="@style/BlackArchivoNarrow"
+            android:textColor="@color/text_gray"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingHorizontal="@dimen/_5sdp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingBottom="@dimen/_5sdp"
+            android:paddingHorizontal="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/tv_terms_of_use"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Terms of Use"
+                android:textSize="@dimen/_10sdp"
+                style="@style/BlackArchivoNarrow"
+                android:textColor="@color/button_blue"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text=" and "
+                android:textSize="@dimen/_10sdp"
+                style="@style/BlackArchivoNarrow"
+                android:textColor="@color/text_gray"/>
+
+            <TextView
+                android:id="@+id/tv_privacy_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Privacy Agreement"
+                android:textSize="@dimen/_10sdp"
+                style="@style/BlackArchivoNarrow"
+                android:textColor="@color/button_blue"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/back_gray"
+    >
+
+    <RelativeLayout
+        android:id="@+id/ll_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_10sdp"
+        android:background="@color/white">
+
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/img_back_arrow"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/back_arrow_black"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/_10sdp"/>
+
+        <TextView
+            android:layout_toRightOf="@id/img_back_arrow"
+            android:layout_centerVertical="true"
+            android:id="@+id/tv_store_location"
+            android:text="My Address Book"
+            android:textSize="@dimen/_22sdp"
+            style="@style/BlackArchivoNarrow" />
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/img_add_address"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/add"
+            android:padding="@dimen/_10sdp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/_10sdp"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="@dimen/_10sdp"
+        android:id="@+id/rv_list"
+        android:scrollbars="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"/>
+
+    <TextView
+        android:layout_marginTop="@dimen/_5sdp"
+        android:visibility="gone"
+        android:id="@+id/tv_no_data_available"
+        style="@style/BlackArchivoNarrow"
+        android:text="No Data Found"
+        android:layout_below="@id/rv_menu_list"
+        android:textSize="@dimen/_16sdp"
+        android:layout_gravity="center"/>
+
+
+</LinearLayout>

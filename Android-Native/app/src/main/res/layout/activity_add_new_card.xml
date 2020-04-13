@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingPrefix">
+
+    <!--<ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/login_bk"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_gradient"/>
+-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_alignParentTop="true"
+                android:id="@+id/ll_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_10sdp"
+                android:background="@color/white">
+
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/img_back_arrow"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/back_arrow_black"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/tv_title"
+                    android:text="New Card"
+                    android:textSize="@dimen/_18sdp"
+                    android:textAlignment="center"
+                    style="@style/BlackArchivoNarrow" />
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_below="@id/ll_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/_30sdp">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_billing_address"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/text_gray"
+                    app:errorEnabled="true"
+                    app:boxStrokeColor="@color/text_gray"
+                    android:focusable="true"
+                    android:backgroundTint="@color/text_gray"
+                    android:theme="@style/TextLabel">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/aedt_billing_address"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:imeOptions="actionNext"
+                        android:layout_marginBottom="8dp"
+                        android:inputType="text"
+                        android:hint="Billing Address of Card"
+                        android:textColorHint="@color/text_hint"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/text_gray"
+                        android:textSize="@dimen/_14sdp"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_billing_zipcode"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/text_gray"
+                    app:errorEnabled="true"
+                    app:boxStrokeColor="@color/text_gray"
+                    android:focusable="true"
+                    android:backgroundTint="@color/text_gray"
+                    android:theme="@style/TextLabel">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/aedt_billing_zipcode"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:imeOptions="actionNext"
+                        android:layout_marginBottom="8dp"
+                        android:inputType="number"
+                        android:hint="Billing Address Zipcode of Card"
+                        android:textColorHint="@color/text_hint"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/text_gray"
+                        android:textSize="@dimen/_14sdp"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+
+
+
+                <TextView
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Card Type"
+                    style="@style/BlackArchivoNarrow"
+                    android:textSize="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_4sdp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spn_card_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:spinnerMode="dropdown" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:src="@drawable/dropdown_image" />
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/black"/>
+
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_card_type_error"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Please Select Caard Type"
+                    style="@style/BlackArchivoNarrow"
+                    android:textColor="@color/error_red"
+                    android:textSize="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_4sdp"/>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:id="@+id/til_card_no"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/text_gray"
+                    app:errorEnabled="true"
+                    app:boxStrokeColor="@color/text_gray"
+                    android:clickable="true"
+                    android:backgroundTint="@color/text_gray"
+                    android:theme="@style/TextLabel">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/aedt_card_no"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:imeOptions="actionNext"
+                        android:layout_marginBottom="8dp"
+                        android:inputType="number"
+                        android:hint="Credit Card No"
+                        android:clickable="true"
+                        android:maxLength="16"
+                        android:textColorHint="@color/text_hint"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/text_gray"
+                        android:textSize="@dimen/_14sdp"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:id="@+id/til_security_code"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/text_gray"
+                    app:errorEnabled="true"
+                    app:boxStrokeColor="@color/text_gray"
+                    android:clickable="true"
+                    android:backgroundTint="@color/text_gray"
+                    android:theme="@style/TextLabel">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/aedt_security_code"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:imeOptions="actionNext"
+                        android:layout_marginBottom="8dp"
+                        android:inputType="number"
+                        android:hint="Security Code"
+                        android:clickable="true"
+                        android:textColorHint="@color/text_hint"
+                        android:textColor="@color/black"
+                        android:backgroundTint="@color/text_gray"
+                        android:textSize="@dimen/_14sdp"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <TextView
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expiration Date"
+                    style="@style/BlackArchivoNarrow"
+                    android:textSize="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_4sdp"/>
+
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginRight="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Month"
+                            style="@style/BlackArchivoNarrow"
+                            android:textSize="@dimen/_10sdp"
+                            android:paddingLeft="@dimen/_4sdp"/>
+
+                        <RelativeLayout
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="@drawable/border">
+
+                            <Spinner
+                                android:id="@+id/spn_month"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:spinnerMode="dropdown" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:src="@drawable/dropdown_image" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="@dimen/_5sdp">
+
+                        <TextView
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Year"
+                            style="@style/BlackArchivoNarrow"
+                            android:textSize="@dimen/_10sdp"
+                            android:paddingLeft="@dimen/_4sdp"/>
+
+                        <RelativeLayout
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="@drawable/border">
+
+                            <Spinner
+                                android:id="@+id/spn_year"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:spinnerMode="dropdown" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:src="@drawable/dropdown_image" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+                <CheckBox
+                    android:id="@+id/chk_save"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Save Card Details"
+                    android:buttonTint="@color/button_blue"
+                    />
+
+
+
+                <Button
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:id="@+id/btn_submit"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/button_red"
+                    android:text="Submit"
+                    android:textSize="@dimen/_12sdp"
+                    android:textAllCaps="true"
+                    style="@style/WhiteArial"
+                    android:layout_marginBottom="@dimen/_20sdp"/>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+    <!--<LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_time_picker"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="vertical"
+        android:background="@color/text_hint">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CANCEL"
+                style="@style/BlackArchivoNarrow"
+                android:textSize="@dimen/_12sdp"
+                android:paddingHorizontal="@dimen/_25sdp"
+                android:paddingVertical="@dimen/_10sdp"/>
+
+            <TextView
+                android:id="@+id/tv_confirm"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONFIRM"
+                style="@style/BlackArchivoNarrow"
+                android:textColor="@color/button_red"
+                android:textSize="@dimen/_12sdp"
+                android:paddingHorizontal="@dimen/_25sdp"
+                android:paddingVertical="@dimen/_10sdp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/_180sdp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_10sdp"
+                android:text="Hour"
+                android:textSize="@dimen/_14sdp"
+                android:textAlignment="center"
+                android:textColor="@color/text_gray"
+                style="@style/BlackArchivoNarrow" />
+
+            <io.blackbox_vision.wheelview.view.WheelView
+                android:id="@+id/hour_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:canLoop="true"
+                app:centerTextColor="#ff000000"
+                app:drawItemCount="7"
+                app:initPosition="3"
+                app:lineColor="@color/colorPrimary"
+                app:textSize="25sp"
+                app:topBottomTextColor="#ffafafaf"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/_180sdp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_10sdp"
+                android:text="Minutes"
+                android:textSize="@dimen/_14sdp"
+                android:textAlignment="center"
+                android:textColor="@color/text_gray"
+                style="@style/BlackArchivoNarrow" />
+
+
+            <io.blackbox_vision.wheelview.view.WheelView
+                android:id="@+id/min_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:canLoop="true"
+                app:centerTextColor="#ff000000"
+                app:drawItemCount="7"
+                app:initPosition="3"
+                app:lineColor="@color/colorPrimary"
+                app:textSize="25sp"
+                app:topBottomTextColor="#ffafafaf"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    </LinearLayout>-->
+
+
+
+</RelativeLayout>

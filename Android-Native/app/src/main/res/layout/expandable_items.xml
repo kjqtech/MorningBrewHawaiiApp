@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:paddingVertical="@dimen/_6sdp"
+    android:paddingLeft="@dimen/_6sdp"
+    android:background="@color/white"
+    android:weightSum="1"
+    android:gravity="center_vertical">
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="0.48"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/BlackArial"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/text_gray"
+            android:text=""/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="0.16"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:buttonTint="@color/button_blue"
+            android:scaleX="0.80"
+            android:scaleY="0.80"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="0.2"
+        android:layout_height="@dimen/_18sdp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_btn_plus"
+                android:textAlignment="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="+"
+                android:textSize="@dimen/_12sdp"
+                android:layout_height="wrap_content"
+                style="@style/BlackArialbold"
+                android:textColor="@color/button_green"
+                android:background="@drawable/border_blue"/>
+
+
+            <TextView
+                android:id="@+id/tv_counter"
+                android:textAlignment="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="1"
+                android:textSize="@dimen/_12sdp"
+                android:layout_height="wrap_content"
+                style="@style/BlackArialbold"
+                android:textColor="@color/order_detail_gray"
+                android:background="@drawable/border_right_vertical_blue"/>
+
+            <TextView
+                android:id="@+id/tv_btn_minus"
+                android:textAlignment="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="-"
+                android:textSize="@dimen/_12sdp"
+                android:layout_height="wrap_content"
+                style="@style/BlackArialbold"
+                android:textColor="@color/button_red"
+                android:background="@drawable/border_right_vertical_blue"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="0.16"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/BlackArchivoNarrow"
+            android:text=""/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

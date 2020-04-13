@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "133729702812",
+    "firebase_url": "https://morning-brew-hawaii.firebaseio.com",
+    "project_id": "morning-brew-hawaii",
+    "storage_bucket": "morning-brew-hawaii.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:133729702812:android:7f89485e352a231b59ee59",
+        "android_client_info": {
+          "package_name": "com.trec2go.MorningBrewHawaii"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "133729702812-hu83lt82caac3jf3dr0h0591skldsukk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgy-WLdkVvKb4fl5EHuA88ssD5qrrS3ms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "133729702812-hu83lt82caac3jf3dr0h0591skldsukk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "133729702812-gq3r44513836fjba7lno2pi9a89cikd9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.trec2go.MorningBrewHawaii"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

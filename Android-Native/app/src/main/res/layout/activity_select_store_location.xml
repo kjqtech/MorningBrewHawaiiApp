@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingPrefix">
+
+    <ImageView
+        android:id="@+id/img_bk"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:id="@+id/ll_alpha"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.6"
+        android:background="@color/black"
+        android:orientation="vertical" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:id="@+id/ll_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_logo"
+            android:layout_marginTop="@dimen/_10sdp">
+
+
+            <ImageView
+                android:id="@+id/img_back_arrow"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/back_arrow_white" />
+
+            <TextView
+                android:id="@+id/tv_store_location"
+                style="@style/WhiteArchivoNarrow"
+                android:layout_centerInParent="true"
+                android:text="Store Location"
+                android:textSize="@dimen/_22sdp" />
+
+
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_250sdp"
+            android:layout_below="@id/ll_heading"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:scrollbars="none" />
+
+
+
+        <TextView
+            android:id="@+id/tv_no_storelocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:singleLine="false"
+            android:text="You are too far away from store location to make an order."
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+        <!--<LinearLayout
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_below="@id/tv_store_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view"
+                android:layout_gravity="center"
+                card_view:cardCornerRadius="6dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:alpha="0.9">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp">
+
+                    <TextView
+                        android:padding="@dimen/_2sdp"
+                        android:textSize="@dimen/_14sdp"
+                        style="@style/BlackArialbold"
+                        android:text="Gregs Pizza - East Coast"/>
+
+                    <TextView
+                        android:padding="@dimen/_2sdp"
+                        android:textSize="@dimen/_10sdp"
+                        style="@style/BlackArial"
+                        android:textColor="@color/text_gray"
+                        android:text="123 Main Street, Brewster NY,10509"/>
+
+
+                    <TextView
+                        android:padding="@dimen/_2sdp"
+                        android:textSize="@dimen/_10sdp"
+                        style="@style/BlackArial"
+                        android:textColor="@color/text_gray"
+                        android:text="Ph#: 6566789054"/>
+
+                    <TextView
+                        android:padding="@dimen/_2sdp"
+                        android:textSize="@dimen/_10sdp"
+                        style="@style/BlackArial"
+                        android:textColor="@color/button_red"
+                        android:text="Map &amp; Direction" />
+
+                    <TextView
+                        android:padding="@dimen/_2sdp"
+                        android:textSize="@dimen/_10sdp"
+                        style="@style/BlackArial"
+                        android:textColor="@color/button_red"
+                        android:text="order from here"
+                        android:textAllCaps="true"/>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="@dimen/_10sdp"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_gravity="center"
+                card_view:cardCornerRadius="6dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:alpha="0.9">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp">
+
+                    <TextView
+                        android:padding="@dimen/_2sdp"
+                        android:textSize="@dimen/_14sdp"
+                        style="@style/BlackArialbold"
+                        android:text="Gregs Pizza - East Coast"/>
+
+                    <TextView
+                        android:padding="@dimen/_2sdp"
+                        android:textSize="@dimen/_10sdp"
+                        style="@style/BlackArial"
+                        android:textColor="@color/text_gray"
+                        android:text="123 Main Street, Brewster NY,10509"/>
+
+
+                    <TextView
+                        android:padding="@dimen/_2sdp"
+                        android:textSize="@dimen/_10sdp"
+                        style="@style/BlackArial"
+                        android:textColor="@color/text_gray"
+                        android:text="Ph#: 6566789054"/>
+
+                    <TextView
+                        android:padding="@dimen/_2sdp"
+                        android:textSize="@dimen/_10sdp"
+                        style="@style/BlackArial"
+                        android:textColor="@color/button_red"
+                        android:text="Map &amp; Direction" />
+
+                    <TextView
+                        android:padding="@dimen/_2sdp"
+                        android:textSize="@dimen/_10sdp"
+                        style="@style/BlackArial"
+                        android:textColor="@color/button_red"
+                        android:text="order from here"
+                        android:textAllCaps="true"/>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>-->
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

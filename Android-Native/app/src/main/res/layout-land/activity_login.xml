@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingPrefix">
+
+    <ImageView
+        android:id="@+id/img_bk"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_gradient"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/_30sdp">
+
+            <TextView
+                android:id="@+id/tv_welcome"
+                android:text="Welcome"
+                android:textSize="@dimen/_35sdp"
+                style="@style/WhiteArchivoNarrowBold"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"/>
+
+
+            <LinearLayout
+                android:layout_below="@id/tv_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:id="@+id/til_email"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/white"
+                    app:errorEnabled="true"
+                    app:boxStrokeColor="@color/white"
+                    android:focusable="true"
+                    android:backgroundTint="@color/white">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/aedt_email"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:imeOptions="actionNext"
+                        android:layout_marginBottom="8dp"
+                        android:inputType="text"
+                        android:hint="Email Address"
+                        android:textColorHint="@color/text_hint"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:textSize="@dimen/_14sdp"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:id="@+id/til_password"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/white"
+                    app:errorEnabled="true"
+                    app:boxStrokeColor="@color/white"
+                    android:focusable="true"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/white"
+                    android:backgroundTint="@color/white">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/aedt_password"
+                        android:imeOptions="actionNext"
+                        android:layout_marginBottom="8dp"
+                        android:inputType="textPassword"
+                        android:hint="Password"
+                        android:textColorHint="@color/text_hint"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:textSize="@dimen/_14sdp"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <CheckBox
+                        android:id="@+id/chk_remember"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:paddingHorizontal="@dimen/_20sdp"
+                        android:buttonTint="@color/button_red"
+                        android:text="Remember Me?"/>
+                </LinearLayout>
+
+                <Button
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:id="@+id/btn_signin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/button_red"
+                    android:text="Sign in"
+                    android:textSize="@dimen/_12sdp"
+                    android:textAllCaps="true"
+                    style="@style/WhiteArial"/>
+
+                <!--<RelativeLayout
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_facebook">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_10sdp"
+                        android:textColor="#ffffff"
+                        android:text="Connect with Facebook"
+                        android:textSize="@dimen/_12sdp"
+                        android:textAllCaps="false"
+                        android:gravity="center"
+                        android:background="@android:color/transparent"
+                        android:layout_gravity="center"
+                        android:drawablePadding="@dimen/_6sdp"
+                        android:drawableLeft="@drawable/white_facebook_icon"
+                        style="@style/WhiteArial"/>
+
+
+                </RelativeLayout>-->
+
+                <TextView
+                    android:id="@+id/tv_forget_password"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Forgot Password"
+                    style="@style/WhiteArial"/>
+
+
+                <TextView
+                    android:id="@+id/tv_skip"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Skip>>"
+                    style="@style/WhiteArial"/>
+                <Button
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:id="@+id/btn_guest_checkout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/button_red"
+                    android:text="Guest Checkout"
+                    android:textSize="@dimen/_12sdp"
+                    android:textAllCaps="true"
+                    style="@style/WhiteArial"/>
+
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tv_create_account"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Don't have an account Sign up"
+                    style="@style/WhiteArial"/>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

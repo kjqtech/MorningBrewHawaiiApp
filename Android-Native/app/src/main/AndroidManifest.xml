@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.trec2go.MorningBrewHawaii">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name="com.trec2go.MorningBrewHawaii.utility.TrecApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon,android:allowBackup">
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.CustomOrederActivity"
+            android:theme="@style/AppTheme.NoActionBar1"></activity>
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.AlertDialogActivity"
+            android:theme="@style/alert_dialog_light" />
+        <activity
+            android:name=".activity.PrivacyPolicyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1"></activity>
+        <activity
+            android:name=".activity.TermsAndUseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.PropertyMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.AboutUsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.ReorderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.AddNewCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.PersonalDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.RegisterAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.SelectCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.ReviewOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.AddAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.AddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.CouponsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.RecentOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.YourBagActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.OrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.AppointmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.TableReservationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.MenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.SelectStoreLocationActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar1" />
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoWhiteSplash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.trec2go.MorningBrewHawaii.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name="com.trec2go.MorningBrewHawaii.utility.Firebase.MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+    </application>
+
+</manifest>

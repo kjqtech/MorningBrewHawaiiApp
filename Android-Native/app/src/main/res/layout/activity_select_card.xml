@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_light_gray">
+
+
+    <RelativeLayout
+        android:id="@+id/ll_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_10sdp">
+
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/img_back_arrow"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/back_arrow_black"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/_10sdp"/>
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:id="@+id/tv_store_location"
+            android:text="Select Card"
+            android:textSize="@dimen/_22sdp"
+            style="@style/BlackArchivoNarrow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="@dimen/_20sdp">
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:app="http://schemas.android.com/tools"
+            android:id="@+id/card_view"
+            card_view:cardCornerRadius="@dimen/_3sdp"
+            card_view:cardBackgroundColor="@color/white"
+            card_view:cardElevation="@dimen/_2sdp"
+            card_view:cardUseCompatPadding="true"
+            app:cardCornerRadius="@dimen/_3sdp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="@dimen/_2sdp"
+            app:cardUseCompatPadding="true"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:alpha="1"
+            app:ignore="NamespaceTypo"
+            android:layout_centerInParent="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:src="@drawable/card"/>
+
+                <RadioGroup
+                    android:id="@+id/rb_group"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp">
+
+                    <RadioButton
+                        android:id="@+id/rb_existing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/black"
+                        style="@style/BlackArchivoNarrow"
+                        android:padding="@dimen/_5sdp"
+                        android:buttonTint="@color/black"
+                        android:text="Pay with Existing Card XXXXXXXXXXXX1111"/>
+
+
+                    <RadioButton
+                        android:id="@+id/rb_new"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/black"
+                        style="@style/BlackArchivoNarrow"
+                        android:padding="@dimen/_5sdp"
+                        android:buttonTint="@color/black"
+                        android:text="Pay with New Card"/>
+
+
+                </RadioGroup>
+
+
+
+                <Button
+                    android:id="@+id/btn_proceed"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_red"
+                    android:text="Proceed"
+                    android:textSize="@dimen/_12sdp"
+                    android:textAllCaps="true"
+                    style="@style/WhiteArial"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"/>
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FFFFFF</color>
+
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="text_hint">#E7E6E6</color>
+    <color name="back_gray">#e5e5e5</color>
+    <color name="back_light_gray">#FCFBFB</color>
+    <color name="card_gray">#F0EEEE</color>
+    <color name="text_gray">#3C3A3A</color>
+    <color name="your_bag_divider">#e5e5e5</color>
+
+    <color name="order_detail_gray">#807F7F</color>
+    <color name="expandable_back">#F3F2F2</color>
+
+
+    <color name="error_red">#DD1313</color>
+
+    <color name="orange">#F7853F</color>
+
+
+
+  <!-- Change from orange color to blue <color name="button_red">#f27031</color>-->
+    <color name="button_red">#4fc1e9</color>
+
+
+    <color name="button_green">#4B8A0A</color>
+    <color name="button_blue">#2196F3</color>
+
+
+    <color name="sweet_alert_pop_color">#AAAAAA</color>
+
+</resources>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingPrefix">
+
+    <ImageView
+        android:id="@+id/img_bk"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_gradient"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/_30sdp">
+
+            <TextView
+                android:text="Register"
+                android:textSize="@dimen/_35sdp"
+                style="@style/WhiteArchivoNarrowBold"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:id="@+id/tv_title"/>
+
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_below="@id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_fname"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/white"
+                    app:errorEnabled="true"
+                    app:boxStrokeColor="@color/white"
+                    android:focusable="true"
+                    android:backgroundTint="@color/white">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/aedt_fname"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:imeOptions="actionNext"
+                        android:layout_marginBottom="8dp"
+                        android:inputType="text"
+                        android:hint="First name"
+                        android:textColorHint="@color/text_hint"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:textSize="@dimen/_14sdp"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:id="@+id/til_lname"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/white"
+                    app:errorEnabled="true"
+                    app:boxStrokeColor="@color/white"
+                    android:focusable="true"
+                    android:backgroundTint="@color/white">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/aedt_lname"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:imeOptions="actionNext"
+                        android:layout_marginBottom="8dp"
+                        android:inputType="text"
+                        android:hint="Last name"
+                        android:textColorHint="@color/text_hint"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:textSize="@dimen/_14sdp"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:id="@+id/til_email"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/white"
+                    app:errorEnabled="true"
+                    app:boxStrokeColor="@color/white"
+                    android:focusable="true"
+                    android:backgroundTint="@color/white">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/aedt_email"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:imeOptions="actionNext"
+                        android:layout_marginBottom="8dp"
+                        android:inputType="textEmailAddress"
+                        android:hint="Email"
+                        android:textColorHint="@color/text_hint"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:textSize="@dimen/_14sdp"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:id="@+id/til_password"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/white"
+                    app:errorEnabled="true"
+                    app:boxStrokeColor="@color/white"
+                    android:focusable="true"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/white"
+                    android:backgroundTint="@color/white">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/aedt_password"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:imeOptions="actionNext"
+                        android:layout_marginBottom="8dp"
+                        android:inputType="textPassword"
+                        android:hint="Password"
+                        android:textColorHint="@color/text_hint"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:textSize="@dimen/_14sdp"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:id="@+id/til_confirm_password"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/white"
+                    app:errorEnabled="true"
+                    app:boxStrokeColor="@color/white"
+                    android:focusable="true"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/white"
+                    android:backgroundTint="@color/white">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/aedt_confirm_password"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:imeOptions="actionNext"
+                        android:layout_marginBottom="8dp"
+                        android:inputType="textPassword"
+                        android:hint="Confirm Password"
+                        android:textColorHint="@color/text_hint"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:textSize="@dimen/_14sdp"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:id="@+id/til_phone_number"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/white"
+                    app:errorEnabled="true"
+                    app:boxStrokeColor="@color/white"
+                    android:focusable="true"
+                    android:backgroundTint="@color/white">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/aedt_phone_number"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:imeOptions="actionNext"
+                        android:layout_marginBottom="8dp"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:hint="Phone Number"
+                        android:textColorHint="@color/text_hint"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/white"
+                        android:textSize="@dimen/_14sdp"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <Button
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:id="@+id/btn_signin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/button_red"
+                    android:text="Sign in"
+                    android:textSize="@dimen/_12sdp"
+                    android:textAllCaps="true"
+                    style="@style/WhiteArial"/>
+
+
+                <TextView
+                    android:id="@+id/tv_back_login"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Back To Login ?"
+                    style="@style/WhiteArial"
+                    android:layout_marginBottom="@dimen/_20sdp"/>
+
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

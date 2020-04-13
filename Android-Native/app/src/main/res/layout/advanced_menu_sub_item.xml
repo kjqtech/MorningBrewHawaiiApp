@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ll_items"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:paddingTop="@dimen/_1sdp"
+        android:paddingBottom="@dimen/_2sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/_5sdp"
+        android:paddingLeft="@dimen/_5sdp">
+
+        <TextView
+            android:id="@+id/advanced_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 X Shrimp Vesurvio"
+            style="@style/BlackArchivoNarrow"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/_10sdp"/>
+
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:id="@+id/advanced_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$234"
+            style="@style/BlackArchivoNarrow"
+            android:textColor="@color/order_detail_gray"
+            android:textSize="@dimen/_10sdp"/>
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>
